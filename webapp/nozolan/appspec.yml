@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /dev/apps/nozolan
+    destination: /home/ubuntu/www/nozolan
 permissions:
-  - object: /dev/apps/
+  - object: /home/ubuntu/www
     pattern: "**"
     mode: 777
 hooks:
