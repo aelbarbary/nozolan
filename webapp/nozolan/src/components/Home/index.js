@@ -18,6 +18,7 @@ import ProductHowItWorks from './ProductHowItWorks';
 import ProductCTA from './ProductCTA';
 import AppAppBar from './AppAppBar';
 import withRoot from '../withRoot';
+import Categories from  './Categories.js';
 
 const styles = theme => ({
   App:{
@@ -106,6 +107,7 @@ class Home extends Component {
         {({ user }) => (
           <React.Fragment>
             <AppAppBar />
+            <Categories/>
             <ProductHero />
             <ProductValues />
             <ProductCategories />
