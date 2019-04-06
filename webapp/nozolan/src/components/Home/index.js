@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import OfferList from '../Offer/List';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import MySnackBar from  '../Common/MySnackBar.js';
+
 import {withRouter} from 'react-router-dom';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Root from '../Root.js';
+
+
 import queryString from 'query-string';
 import { SharedDataConsumer } from '../../context/SharedData.context.js';
 import ProductCategories from './ProductCategories';
@@ -99,9 +97,6 @@ class Home extends Component {
     this.setState({query: query, zipcode: zipcode, onlyEvents: onlyEvents});
   }
   render() {
-    const { classes } = this.props;
-    const {alertOpen, alertMessage} = this.state;
-
     return (
       <SharedDataConsumer>
         {({ user }) => (
