@@ -50,13 +50,16 @@ class Categories extends React.Component {
             scrollButtons="auto"
             centered
           >
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
-            <Tab label="Item Four" />
-            <Tab label="Item Five" />
-            <Tab label="Item Six" />
-            <Tab label="Item Seven" />
+            <Tab label="Islamic Services" />
+            <Tab label="Health and Beauty" />
+            <Tab label="Fitness" />
+            <Tab label="Catering" />
+            <Tab label="Halal" />
+            <Tab label="Youth Activities" />
+            <Tab label="Education" />
+            <Tab label="Mosques" />
+            <Tab label="Weekend" />
+            <Tab label="Sisters" />
           </Tabs>
         </AppBar>
       </div>
