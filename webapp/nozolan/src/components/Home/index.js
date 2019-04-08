@@ -10,7 +10,7 @@ import { SharedDataConsumer } from '../../context/SharedData.context.js';
 import ProductCategories from './ProductCategories';
 import ProductSmokingHero from './ProductSmokingHero';
 import AppFooter from './AppFooter';
-import ProductHero from './ProductHero';
+import Main from './Main';
 import ProductValues from './ProductValues';
 import ProductHowItWorks from './ProductHowItWorks';
 import ProductCTA from './ProductCTA';
@@ -103,7 +103,7 @@ class Home extends Component {
           <React.Fragment>
             <AppAppBar />
             <Categories/>
-            <ProductHero />
+            <Main />
             <ProductValues />
             <ProductCategories />
             <ProductHowItWorks />
