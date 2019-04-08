@@ -57,11 +57,7 @@ const LANGUAGES = [
   {
     code: 'en-US',
     name: 'English',
-  },
-  {
-    code: 'fr-FR',
-    name: 'Français',
-  },
+  }
 ];
 
 function AppFooter(props) {
@@ -121,7 +117,7 @@ function AppFooter(props) {
               ))}
             </TextField>
           </Grid>
-          
+
         </Grid>
       </LayoutBody>
     </Typography>

@@ -7,7 +7,6 @@ import { SharedDataConsumer } from '../../context/SharedData.context.js';
 
 import withRoot from '../withRoot';
 
-
 const styles = theme => ({
   App:{
     margin: 0

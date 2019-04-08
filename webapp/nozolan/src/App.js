@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Home from './components/Home/index';
 
-import Store from './components/Store/index.js';
+
 import Login from './components/Login/index';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './styles/global.sass';
