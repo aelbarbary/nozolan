@@ -39,11 +39,11 @@ const styles = theme => ({
 class AppAppBar extends Component{
   state ={ loginOpen: false, registerOpen: false};
   handleSignIn = () => {
-      this.setState({ loginOpen: true });
+      this.setState({ loginOpen: true, registerOpen: false });
     };
 
   handleRegister = () => {
-      this.setState({ registerOpen: true });
+      this.setState({ registerOpen: true,  loginOpen: false});
     };
 
   render() {
