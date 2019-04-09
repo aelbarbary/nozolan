@@ -10,8 +10,9 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
-import Divider from '../Common/Divider';
 
+import Typography from '@material-ui/core/Typography';
+import Divider from '../Common/Divider.js'
 const styles = theme => ({
   signInButton: {
     width: '100%',
@@ -27,7 +28,7 @@ const styles = theme => ({
   }
 });
 
-class Login extends Component {
+class Register extends Component {
 
   constructor(props) {
     super(props);
@@ -57,7 +58,14 @@ class Login extends Component {
           onClose={()=> this.handleClose()}
           aria-labelledby="form-dialog-title"
         >
-          <DialogTitle id="form-dialog-title">Sign In to Continue</DialogTitle>
+          <DialogTitle id="form-dialog-title">
+            <div>Register your account</div>
+
+            <Typography component="h7" style={{color: 'gray', fontSize: 10}}>
+              Registration is easy
+            </Typography>
+          </DialogTitle>
+
           <DialogContent>
           <TextField
               id="email"
@@ -70,19 +78,29 @@ class Login extends Component {
               variant="outlined"
             />
             <TextField
+                id="first_name"
+                label="first_name"
+                className={classes.input}
+                value={this.state.first_name}
+                onChange={this.handleChange('first_name')}
+                margin="normal"
+                fullWidth
+                variant="outlined"
+              />
+            <TextField
                 id="password"
                 label="password"
                 className={classes.input}
-                value={this.state.password}
+                value={this.state.first_name}
                 onChange={this.handleChange('password')}
                 margin="normal"
                 fullWidth
                 variant="outlined"
               />
+
             <Button variant="outlined" color="inherit" className={classes.signInButton}>
-              Sign In
+              Register
             </Button>
-            <Link to="www.google.com"> Forget your password </Link>
 
             <Divider text="OR"/>
 
@@ -96,8 +114,8 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
+Register.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRouter(withStyles(styles)(Login));
+export default withRouter(withStyles(styles)(Register));

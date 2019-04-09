@@ -6,6 +6,7 @@ import Link from '@material-ui/core/Link';
 import AppBar from '../Common/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../Common/Toolbar';
 import Login from '../Login/login.js';
+import Register from '../Register/';
 const styles = theme => ({
   title: {
     fontSize: 24,
@@ -36,9 +37,13 @@ const styles = theme => ({
 });
 
 class AppAppBar extends Component{
-  state ={ open: false};
+  state ={ loginOpen: false, registerOpen: false};
   handleSignIn = () => {
-      this.setState({ open: true });
+      this.setState({ loginOpen: true });
+    };
+
+  handleRegister = () => {
+      this.setState({ registerOpen: true });
     };
 
   render() {
@@ -64,7 +69,7 @@ class AppAppBar extends Component{
                 variant="h6"
                 underline="none"
                 className={classes.rightLink}
-                onClick={this.handleSignIn}
+                onClick={() => this.handleSignIn()}
               >
                 {'Sign In'}
               </Link>
@@ -72,12 +77,13 @@ class AppAppBar extends Component{
                 variant="h6"
                 underline="none"
                 className={clsx(classes.rightLink, classes.linkSecondary)}
-                href="/premium-themes/onepirate/sign-up"
+                onClick={() => this.handleRegister()}
               >
                 {'Sign Up'}
               </Link>
 
-              <Login open ={this.state.open}/>
+              <Login open ={this.state.loginOpen}/>
+              <Register open ={this.state.registerOpen}/>
             </div>
           </Toolbar>
         </AppBar>
