@@ -75,11 +75,14 @@ WSGI_APPLICATION = 'nozolan.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql',
+         'NAME': 'nozolan',
+         'HOST': '52.27.126.98',
+         'USER': 'postgres',
+         'PASSWORD': 'passw0rd'
+     }
+ }
 
 
 # Password validation
@@ -117,6 +120,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+
+MEDIA_ROOT = '/www/nozolan/media'
+MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
