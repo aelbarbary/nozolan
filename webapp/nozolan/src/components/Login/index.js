@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { auth, googleProvider, facebookProvider } from '../../lib/firebase.js';
+import { Auth } from 'aws-amplify';
 
 import PropTypes from 'prop-types';
 
@@ -26,23 +26,13 @@ class Login extends Component {
 
 
   googleLogin() {
-    const {callbackLink} = this.props.location.state;
-    auth.signInWithPopup(googleProvider)
-      .then((result) => {
-        this.props.history.push({
-               pathname: callbackLink,
-             });
-      });
+
   }
 
   facebookLogin() {
-    const {callbackLink} = this.props.location.state;
-    auth.signInWithPopup(facebookProvider)
-      .then((result) => {
-        this.props.history.push({
-               pathname: callbackLink,
-             });
-      });
+        console.log("test");
+          const user =  Auth.signIn('username', 'password');
+          console.log(user);
   }
 
   render() {
