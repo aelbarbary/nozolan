@@ -5,6 +5,8 @@ from .models import  *
 class ProviderAdmin(admin.ModelAdmin):
     model = Provider
 
-
+class OfferAdmin(admin.ModelAdmin):
+    model = Offer
 
 admin.site.register(Provider, ProviderAdmin)
+admin.site.register(Offer, OfferAdmin)
