@@ -18,6 +18,7 @@ class Provider(models.Model):
 class Offer(models.Model):
     provider = models.ForeignKey(Provider, related_name='offers', on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
+    description = models.CharField(max_length=8000)
     tags = models.CharField(max_length=8000)
     image = models.ImageField(upload_to = "offers", default = 'no-img.jpg')
     date_created = models.DateField(max_length=8, null=True)
