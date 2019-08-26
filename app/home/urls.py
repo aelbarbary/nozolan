@@ -8,5 +8,5 @@ from django.views.generic.base import TemplateView
 app_name = 'home'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'blog', TemplateView.as_view(template_name='blog.html'), name="blog"),
+    url(r'^c/(?P<category>[\w\-]+)/$', views.category, name='category'),
 ]
