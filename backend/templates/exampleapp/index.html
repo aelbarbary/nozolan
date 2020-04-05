@@ -23,7 +23,7 @@
     <p>List of polls available:</p>
     <ul>
       {% for question in latest_question_list %}
-        <li><a href="{% url 'exampleapp:detail' question.id %}">{{ question.question_text }}</a></li>
+        <li><a href="{% url 'nozolanapp:detail' question.id %}">{{ question.question_text }}</a></li>
       {% endfor %}
     </ul>
   {% else %}

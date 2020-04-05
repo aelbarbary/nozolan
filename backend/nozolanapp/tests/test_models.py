@@ -3,7 +3,7 @@ import datetime
 from django.test import TestCase
 from django.utils import timezone
 
-from exampleapp.models import Question
+from nozolanapp.models import Question
 
 
 class QuestionModelTests(TestCase):

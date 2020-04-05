@@ -25,7 +25,7 @@ AUTH_USER_MODEL = "users.User"
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-    "exampleapp.apps.ExampleappConfig",
+    "nozolanapp.apps.NozolanappConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

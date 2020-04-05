@@ -168,3 +168,8 @@ This project, as other Vinta open-source projects, is used in products of Vinta 
 Copyright (c) 2020 Vinta Serviços e Soluções Tecnológicas Ltda.
 
 [MIT License](LICENSE.txt)
+
+
+## running
+`cd backend`
+`python manage.py runserver`
